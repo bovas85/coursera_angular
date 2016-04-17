@@ -2,8 +2,8 @@
 
 Navigate into confusion folder then:
 
-`npm install json-server -g`
-`npm install`
+`npm install json-server -g`<br>
+`npm install`<br>
 
 `gulp`<br>
 `gulp watch`
