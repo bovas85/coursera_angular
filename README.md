@@ -5,6 +5,7 @@
 
 Navigate into confusion folder then:<br>
 
+`npm update -g`<br>
 `npm install`<br>
 `bower install`<br>
 
