@@ -48,7 +48,6 @@ angular.module('confusionApp')
         }])
         .controller('FeedbackController', ['$scope', 'feedbackFactory', function($scope, feedbackFactory) {
             $scope.sendFeedback = function() {
-                console.log($scope.feedback);
                 if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
                     console.log('incorrect');
@@ -96,7 +95,7 @@ angular.module('confusionApp')
         .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
             $scope.showDish = false;
             $scope.message = "Loading ...";
-            $scope.dish = menuFactory.getDishes().get({id:0})
+            $scope.dish = menuFactory.getDishes().get({id:1})
             .$promise.then(
               function(response){
                 $scope.dish = response;
@@ -109,7 +108,7 @@ angular.module('confusionApp')
 
             $scope.showPromotion = false;
             $scope.promoMessage = "Loading Promotion...";
-            $scope.promotion = menuFactory.getPromotion().get({id:0})
+            $scope.promotion = menuFactory.getPromotion().get({id:1})
             .$promise.then(
               function(response){
                 $scope.promotion = response;
@@ -122,7 +121,7 @@ angular.module('confusionApp')
 
             $scope.showLeader = false;
             $scope.leaderMessage = "Loading Leadership...";
-            $scope.leader = corporateFactory.getLeaders().get({id:3})
+            $scope.leader = corporateFactory.getLeaders().get({id:4})
             .$promise.then(
               function(response){
                 $scope.leader = response;
